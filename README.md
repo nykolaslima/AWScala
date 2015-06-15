@@ -37,6 +37,16 @@ libraryDependencies += "com.github.seratch" %% "awscala" % "0.3.+"
 
 ## Examples
 
+### Configuring your credentials
+By default, AWScala uses the following environment variables to configure AWS credentials:
+```
+export AWS_ACCESS_KEY_ID=xxx
+export AWS_SECRET_ACCESS_KEY=yyy
+```
+
+You could also do it programmatically, using the `Credentials` object:
+`implicit val s3 = S3(Credentials(accessKeyId = "xxx", secretAccessKey = "yyy"))`
+
 ### AWS Identity and Access Management (IAM)
 
 ```scala
